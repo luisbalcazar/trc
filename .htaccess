@@ -1,0 +1,23 @@
+# Impedir que se pueda ver el listado de contenidos de un directorio
+
+Options All -Indexes
+
+# Url Amigables
+
+RewriteEngine on
+
+#2 variables
+
+RewriteRule ^([a-zA-Z0-9\-]+\w+)$ index.php?action=$1 
+
+# redireccion http www
+
+RewriteCond %{HTTP} off
+# First rewrite to HTTPS:
+# Don't put www. here. If it is already there it will be included, if not
+# the subsequent rule will catch it.
+RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Now, rewrite any request to the wrong domain to use www.
+# [NC] is a case-insensitive match
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

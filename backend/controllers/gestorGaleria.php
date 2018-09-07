@@ -1,0 +1,91 @@
+<?php
+
+class GestorGaleria{
+
+	#MOSTRAR IMAGEN GALERIA AJAX
+	#------------------------------------------------------------
+	public function mostrarImagenController($datos){
+
+		list($ancho, $alto) = getimagesize($datos);
+
+		if($ancho < 400 || $alto < 330){
+
+			echo 0;
+
+		}
+
+		else{
+
+
+			$aleatorio = mt_rand(100, 999);
+
+			$ruta = "../../views/images/galeria/galeria".$aleatorio.".jpg";
+
+
+			move_uploaded_file($datos,$ruta);
+			
+			GestorGaleriaModel::subirImagenGaleriaModel($ruta, "galeria");
+
+			$respuesta = GestorGaleriaModel::mostrarImagenGaleriaModel($ruta, "galeria");
+
+			echo $respuesta["ruta"];
+
+		}
+
+	}
+
+	#MOSTRAR IMAGENES EN LA VISTA
+	#------------------------------------------------------------
+
+	public function mostrarImagenVistaController(){
+
+		$respuesta = GestorGaleriaModel::mostrarImagenVistaModel("galeria");
+
+		foreach($respuesta as $row => $item){
+
+			echo '<li id="'.$item["id"].'" class="bloqueGaleria">
+					<span class="fa fa-times eliminarFoto" ruta="'.$item["ruta"].'"></span>
+					<a rel="grupo" href="'.substr($item["ruta"],6).'">
+					<img src="'.substr($item["ruta"],6).'" class="handleImg">
+					</a>
+				</li>';
+
+		}
+
+	}
+
+	#ELIMINAR ITEM DE LA GALERIA
+	#-----------------------------------------------------------
+	public function eliminarGaleriaController($datos){
+
+		$respuesta = GestorGaleriaModel::eliminarGaleriaModel($datos, "galeria");
+
+		unlink($datos["rutaGaleria"]);
+
+		echo $respuesta;
+
+	}
+
+	#ACTUALIZAR ORDEN 
+	#---------------------------------------------------
+	public function actualizarOrdenController($datos){
+
+		GestorGaleriaModel::actualizarOrdenModel($datos, "galeria");
+
+		$respuesta = GestorGaleriaModel::seleccionarOrdenModel("galeria");
+
+		foreach($respuesta as $row => $item){
+
+			echo '<li id="'.$item["id"].'" class="bloqueGaleria">
+					<span class="fa fa-times eliminarFoto" ruta="'.$item["ruta"].'"></span>
+					<a rel="grupo" href="'.substr($item["ruta"],6).'">
+					<img src="'.substr($item["ruta"],6).'" class="handleImg">
+					</a>
+				</li>';
+
+		}
+
+
+	}
+
+}
