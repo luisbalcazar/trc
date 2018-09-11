@@ -20,7 +20,7 @@ class Slide{
 			<!-- MAIN IMAGE -->
 			<img src=\"backend/$imagen\" alt=\"home1\"/> 
 			<!-- LAYER NR. 1 -->
-			<div class=\"tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0 text-1\" id=\"slide-1-layer-1\" 
+			<div class=\"tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0 text-1 title_slide\" id=\"slide-1-layer-1\" 
 				data-x=\"['left','left','left','left']\" data-hoffset=\"['165','-730','-730','-730']\" 
 				data-y=\"['top','top','top','top']\"  data-voffset=\"['200','200','200','200']\" 
 				data-fontsize=\"['70','100','120','140']\"

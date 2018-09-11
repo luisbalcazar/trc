@@ -56,7 +56,7 @@
 	
 </head>
 
-<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+<body data-offset="200" data-spy="scroll" >
 	<div class="main-container">
 		<!-- Loader -->
 		<div id="site-loader" class="load-complete">
@@ -72,12 +72,12 @@
 				<?php include "modules/menu.php"; ?>	
 		</header><!-- Header Section /- -->
 	
-		<main>
+		<div><!-- Slider -->
 				<?php include ('modules/slide.php'); ?>
-				
+		</div>		
 			<!-- Welcome Section -->
 			
-			<div class="welcome-section container-fluid no-padding">
+		<div class="welcome-section container-fluid no-padding">
 				<!--<div class="container">
 					<form class="form-inline" action="search" method="POST" autocomplete="off">
 						<div class="row">
@@ -116,8 +116,8 @@
 					<div class="padding-50"></div>
 				</div>-->
 				
-				<?php include ('modules/welcome.php');?>
-			</div><!-- Welcome Section /- -->
+			<?php include ('modules/welcome.php');?>
+		</div><!-- Welcome Section /- -->
 			
 			<!-- Counter Section -->
 			<div id="counter_section-1" class="container-fluid no-padding counter-section">
@@ -135,10 +135,6 @@
 			<!-- Portfolio Section -->
 			<?php include ('modules/galeria.php'); ?>
 			<!-- Portfolio Section /- -->
-			
-			<div class="section-padding"></div>
-			
-			
 			
 			<!-- Call To Action -->
 			<div class="cta-section container-fluid no-padding">

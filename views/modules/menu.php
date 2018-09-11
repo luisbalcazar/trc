@@ -1,8 +1,8 @@
 
 <!-- nav -->
-	<nav class="ow-navigation sticky-top navbar navbar-default navbar-light bg-light navbar-expand-lg">
+	<nav class="navbar navbar-default navbar-light bg-light navbar-expand-lg menu">
 					
-		<a href="index.php" class="navbar-brand">
+		<a href="index.php" class="navbar-brand" style="position: relative; top: -25px;">
 			<img src="views/images/logo.png" width="70" height="70">
 		</a>
 
@@ -19,7 +19,7 @@
 		</div><!-- Menu Icon /- -->
 
 		<div class="collapse navbar-collapse" id="navbar">
-			<ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
+			<ul class="nav navbar-nav mr-auto mt-2 mt-lg-0" style="position: relative;" id="ul_menu">
                      <?php
                              $mostrarArticulo = new MenuController();
                              $mostrarArticulo -> mostrarMenuController();
