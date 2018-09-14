@@ -112,6 +112,7 @@
 }
 .slider-section:not(.slider-section2) .uranus.tparrows.tp-rightarrow {
 	background-position: right top;
+	opacity: 0.6;
 }
 
 .slider-section:not(.slider-section2) .uranus.tparrows.tp-leftarrow:hover {

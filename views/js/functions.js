@@ -437,3 +437,42 @@ $(document).ready(function(){
 	});
 
 });
+
+$(document).ready(function(){
+
+	var ancho = $(window).width();
+
+	if (ancho <= 1350){
+		$('body').css({
+			'background-size': 'initial'
+		});
+	}
+ 
+	$(window).scroll(function(){
+		var barra = $(window).scrollTop();
+		var posicion =  (barra * 0.40);
+		
+		$('body').css({
+			'background-position': '0 -' + posicion + 'px'
+		});
+ 
+	});
+ 
+});
+
+$(document).ready(function(){
+	var offset = 350;
+	var duration = 500;
+
+	$(window).scroll(function(){
+		if ($(this).scrollTop()>offset) {
+			$('.to-top').fadeIn(duration);
+		} else{
+			$('.to-top').fadeOut(duration);
+		}
+	})
+
+	$('.to-top').click(function(){
+		$('body').animate({scrollTop: 0}, duration);
+	})
+});

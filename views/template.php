@@ -16,6 +16,7 @@
 
 	<title>turentalcars - Home</title>
 	<link rel="stylesheet" type="text/css" href="views/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="views/css/css/fontawesome-all.min.css">
 
 	<!-- Standard Favicon -->
 	<link rel="icon" type="image/x-icon" href="views/images//favicon.ico" />
@@ -120,7 +121,7 @@
 		</div><!-- Welcome Section /- -->
 			
 			<!-- Counter Section -->
-			<div id="counter_section-1" class="container-fluid no-padding counter-section">
+			<div id="counter_section-1" class="container-fluid no-padding counter-section parallax">
 				<div class="padding-70"></div>
 				<!-- Container -->
 			<?php include('modules/count.php'); ?>
@@ -131,7 +132,8 @@
 			
 			<?php include ('modules/testimonials.php');?>
 			
-			<div class="section-padding"></div>
+			<!--<div class="section-padding"></div>-->
+			<br>
 			<!-- Portfolio Section -->
 			<?php include ('modules/galeria.php'); ?>
 			<!-- Portfolio Section /- -->
@@ -193,6 +195,16 @@
 				format:'m/d/Y H:00',
 				minDate:'+1970/01/02', //yesterday is minimum date
 			});
+
+			$('#start2').datetimepicker({
+				format:'m/d/Y H:00',
+				minDate:'+1970/01/02', //yesterday is minimum date
+			});
+			
+			$('#end2').datetimepicker({
+				format:'m/d/Y H:00',
+				minDate:'+1970/01/02', //yesterday is minimum date
+			});
 			
 		});
 		
@@ -205,8 +217,22 @@
 			$("#Drop").val($(this).find('option:selected').text());
 
 		})
+
+		$("#locPickup").change(function(){
+			$("#Pick").val($(this).find('option:selected').text());
+
+		})
+
+		$("#locDropoff").change(function(){
+			$("#Drop").val($(this).find('option:selected').text());
+
+		})
 		  
 		 
     </script>
+    <div class="container">
+		<a href="#top" class="to-top"><i class="fas fa-angle-up"></i></a>
+	</div>
 </body>
 </html>
+

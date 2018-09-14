@@ -14,6 +14,7 @@
     <meta name="author" content="">
 
 	<title>Turentalcars - <?php echo $respuesta["titulo"]; ?></title>
+	<link rel="stylesheet" type="text/css" href="views/css/bootstrap.min.css" />
 
 	<!-- Standard Favicon -->
 	<link rel="icon" type="image/x-icon" href="views/images//favicon.ico" />

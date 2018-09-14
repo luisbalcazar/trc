@@ -1,18 +1,18 @@
 
 <!-- nav -->
-	<nav class="navbar navbar-default navbar-light bg-light navbar-expand-lg menu">
+	<nav class="navbar navbar-default navbar-light bg-light navbar-expand-lg menu" id="top">
 					
-		<a href="index.php" class="navbar-brand" style="position: relative; top: -25px;">
+		<a href="index.php" class="navbar-brand menu_logo" style="">
 			<img src="views/images/logo.png" width="70" height="70">
 		</a>
 
-		<button class="navbar-toggler" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" aria-label="Toggle navigation">
+		<button class="navbar-toggler" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button" aria-label="Toggle navigation"  id="toggle-menu">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="navbar-toggler-icon"></span>
 		</button>
 					
 		<!-- Menu Icon -->
-		<div class="menu-icon">
+		<div class="menu-icon" >
 			<div class="search">	
 				<a href="#" id="search" title="Search"><img src="views/images/search-ic.png" alt="Search" /></a>
 			</div>
@@ -27,12 +27,18 @@
 							
 			</ul>
 			
+			<!-- Search Box -->
+			<div class="search-box" >
+				<span><i class="icon_close"></i></span>
+				<form>
+					<input type="text" class="form-control" placeholder="Enter a keyword and presenter..." />
+				</form>
+			</div>
+			<!-- Search Box /- -->
+			
 		</div><!--/.nav-collapse -->
 
 	</nav><!-- nav /- -->
-	<!-- Search Box -->
-	<div class="search-box">
-		<span><i class="icon_close"></i></span>
-		<form><input type="text" class="form-control" placeholder="Enter a keyword and presenter..." /></form>
-	</div><!-- Search Box /- -->
+	
+	
 			

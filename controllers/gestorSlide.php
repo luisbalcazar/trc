@@ -1,5 +1,4 @@
 <link rel="stylesheet" type="text/css" href="views/style.css">	
-
 <link rel="stylesheet" type="text/css" href="views/css/plugins.css">
 <link rel="stylesheet" type="text/css" href="views/css/navigation-menu.css">
 <link rel="stylesheet" type="text/css" href="views/css/shortcode.css">
@@ -18,7 +17,7 @@ class Slide{
 			echo "
 			<li data-transition=\"fade\" data-slotamount=\"1\"  data-easein=\"default\" data-easeout=\"default\" data-masterspeed=\"1500\" > 
 			<!-- MAIN IMAGE -->
-			<img src=\"backend/$imagen\" alt=\"home1\"/> 
+			<img class='parallax' src=\"backend/$imagen\" alt=\"home1\"/> 
 			<!-- LAYER NR. 1 -->
 			<div class=\"tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0 text-1 title_slide\" id=\"slide-1-layer-1\" 
 				data-x=\"['left','left','left','left']\" data-hoffset=\"['165','-730','-730','-730']\" 

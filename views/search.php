@@ -49,6 +49,8 @@
     <meta name="author" content="">
 
 	<title>turentalcars - Home</title>
+	<link rel="stylesheet" type="text/css" href="views/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="views/css/css/fontawesome-all.min.css">
 
 	<!-- Standard Favicon -->
 	<link rel="icon" type="image/x-icon" href="views/images//favicon.ico" />
@@ -185,5 +187,9 @@
 	
 	<!-- Library - Theme JS -->
 	<script src="views/js/functions.js"></script>
+
+	 <div class="container">
+		<a href="#top" class="to-top"><i class="fas fa-angle-up"></i></a>
+	</div>
 </body>
 </html>
